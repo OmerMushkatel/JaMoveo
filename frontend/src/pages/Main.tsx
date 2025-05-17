@@ -71,10 +71,8 @@ export default function Main() {
     }
   };
 
-  // האזנה להודעה מהשרת - איזה שיר נבחר
   useEffect(() => {
     socket.on("songSelected", (data) => {
-      console.log("🎵 שיר נבחר:", data);
       setCurrentSongId(data);
     });
 

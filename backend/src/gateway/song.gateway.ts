@@ -20,17 +20,13 @@ export class SongGateway implements OnGatewayConnection, OnGatewayDisconnect {
   private currentSong: string | null = null;
 
   handleConnection(client: Socket) {
-    console.log('New client connected:', client.id);
     client.emit('songSelected', this.currentSong);
   }
 
-  handleDisconnect(client: Socket) {
-    console.log('Client disconnected:', client.id);
-  }
+  handleDisconnect(client: Socket) {}
 
   @SubscribeMessage('songSelected')
   handleSongSelected(@MessageBody() songId: string, client: Socket) {
-    console.log('🎵 songSelected received from client:', songId);
     this.currentSong = songId;
 
     this.server.emit('songSelected', songId);
