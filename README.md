@@ -32,7 +32,7 @@ git clone git@github.com:OmerMushkatel/JaMoveo.git
 cd JaMoveo
 ```
 
-## Usage
+## Local setup
 
 ```bash
 # Define .env in database
@@ -47,6 +47,46 @@ cd frontend
 npm install
 npm run dev -- --host
 ```
+
+## Project Structure
+JaMoveo/
+│
+├── backend/                   # NestJS backend app
+│   ├── src/
+│   │   ├── auth/              # Authentication logic (JWT, guards, strategy)
+│   │   ├── enums/             # Shared enums (e.g., instruments)
+│   │   ├── gateway/           # WebSocket gateway (real-time sync)
+│   │   ├── songs/             # Song management (search, schema, controller)
+│   │   ├── users/             # User handling (schema, service, controller)
+│   │   └── main.ts            # App bootstrap
+│   ├── Dockerfile.dev         # Dockerfile for backend service
+│   └── ...                    # Configs, tests, and shared utils
+│
+├── frontend/                  # React (Vite + TS) frontend app
+│   ├── src/
+│   │   ├── components/        # Reusable UI components
+│   │   │   └── Logos/         # Logo components (Header, Black, White)
+│   │   ├── pages/             # App views (Login, Register, Main, 404)
+│   │   ├── types/             # TypeScript interfaces and models
+│   │   ├── assets/            # Static images and assets
+│   │   ├── socket.ts          # WebSocket client connection
+│   │   └── main.tsx           # React entry point
+│   ├── public/                # Public static files
+│   ├── vite.config.ts         # Vite configuration
+│   └── Dockerfile.dev         # (optional) Dev Dockerfile
+│
+├── database/                  # MongoDB container config
+│   ├── .env.example           # Example DB environment variables
+│   └── Dockerfile.dev         # Dockerfile for MongoDB (if applicable)
+│
+├── general/                   # General assets and branding
+│   └── logo.png               # App logo
+│
+├── docker-compose.yml         # Docker Compose orchestration
+├── architecture.drawio        # System architecture diagram
+├── README.md                  # You're here 📄
+└── .gitignore                 # Git ignored files
+
 
 ## Technologies Used
 
