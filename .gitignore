@@ -3,3 +3,4 @@ include database/.gitignore
 include frontend/.gitignore
 
 **/.DS_Store
+frontend/.env
