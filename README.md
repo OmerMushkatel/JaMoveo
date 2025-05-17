@@ -7,9 +7,9 @@ This app allows band members to log in from their phones, select their instrumen
 
 ## User Access Information
 
-You can create regular user via: https://jamoveo-rust.vercel.app/register
-You can create admin user via: https://jamoveo-rust.vercel.app/registerAdmin
-You can login via: https://jamoveo-rust.vercel.app/login
+- You can create regular user via: https://jamoveo-rust.vercel.app/register
+- You can create admin user via: https://jamoveo-rust.vercel.app/registerAdmin
+- You can login via: https://jamoveo-rust.vercel.app/login
 
 ## Pre-Created Users for Your Use
 
