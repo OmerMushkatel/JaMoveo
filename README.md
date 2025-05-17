@@ -49,61 +49,61 @@ npm run dev -- --host
 ```
 
 ## Project Structure
+
 JaMoveo/
-├── backend/                      # NestJS backend
-│   ├── src/
-│   │   ├── auth/                 # Auth module (JWT, guards, strategies)
-│   │   ├── enums/                # Shared enums (e.g., instruments)
-│   │   ├── gateway/              # WebSocket gateway
-│   │   ├── songs/                # Songs module (schema, service, controller)
-│   │   ├── users/                # Users module (schema, service, controller)
-│   │   ├── app.module.ts         # Root module
-│   │   ├── main.ts               # App bootstrap
-│   │   └── app.controller.ts     # Root controller
-│   ├── Dockerfile.dev            # Dev Dockerfile
-│   └── ...                       # Tests, configs, etc.
+├── backend/ # NestJS backend
+│ ├── src/
+│ │ ├── auth/ # Auth module (JWT, guards, strategies)
+│ │ ├── enums/ # Shared enums (e.g., instruments)
+│ │ ├── gateway/ # WebSocket gateway
+│ │ ├── songs/ # Songs module (schema, service, controller)
+│ │ ├── users/ # Users module (schema, service, controller)
+│ │ ├── app.module.ts # Root module
+│ │ ├── main.ts # App bootstrap
+│ │ └── app.controller.ts # Root controller
+│ ├── Dockerfile.dev # Dev Dockerfile
+│ └── ... # Tests, configs, etc.
 │
-├── frontend/                     # Vite + React frontend
-│   ├── src/
-│   │   ├── components/           # Shared UI components
-│   │   │   └── Logos/            # Logo variants
-│   │   ├── pages/                # Main pages (Login, Register, etc.)
-│   │   ├── types/                # TypeScript interfaces
-│   │   ├── assets/               # Static assets
-│   │   ├── socket.ts             # Socket.IO client
-│   │   └── main.tsx              # React entry point
-│   ├── public/                   # Static public files
-│   ├── vite.config.ts            # Vite config
-│   ├── package.json              # Frontend dependencies
-│   └── Dockerfile.dev            # (Optional) Dev Dockerfile
+├── frontend/ # Vite + React frontend
+│ ├── src/
+│ │ ├── components/ # Shared UI components
+│ │ │ └── Logos/ # Logo variants
+│ │ ├── pages/ # Main pages (Login, Register, etc.)
+│ │ ├── types/ # TypeScript interfaces
+│ │ ├── assets/ # Static assets
+│ │ ├── socket.ts # Socket.IO client
+│ │ └── main.tsx # React entry point
+│ ├── public/ # Static public files
+│ ├── vite.config.ts # Vite config
+│ ├── package.json # Frontend dependencies
+│ └── Dockerfile.dev # (Optional) Dev Dockerfile
 │
-├── database/                     # MongoDB container
-│   ├── .env.example              # Example DB environment
-│   └── Dockerfile.dev            # Dev Dockerfile for MongoDB
+├── database/ # MongoDB container
+│ ├── .env.example # Example DB environment
+│ └── Dockerfile.dev # Dev Dockerfile for MongoDB
 │
-├── general/                      # Shared brand assets
-│   └── logo.png                  # App logo
+├── general/ # Shared brand assets
+│ └── logo.png # App logo
 │
-├── docker-compose.yml            # Service orchestration
-├── architecture.drawio           # System architecture diagram
-├── README.md                     # Project documentation
-└── .gitignore                    # Git ignored files
+├── docker-compose.yml # Service orchestration
+├── architecture.drawio # System architecture diagram
+├── README.md # Project documentation
+└── .gitignore # Git ignored files
 
-
-
+<!-- TREEVIEW START -->
 
 ├── example-directory/
-│   ├── build/
-│   ├── scripts/
-│   ├── src/
-│   │   ├── backend/
-│   │   │   └── server/
-│   │   └── frontend/
-│   │       ├── js/
-│   │       └── styles/
-│   └── tests/
+│ ├── build/
+│ ├── scripts/
+│ ├── src/
+│ │ ├── backend/
+│ │ │ └── server/
+│ │ └── frontend/
+│ │ ├── js/
+│ │ └── styles/
+│ └── tests/
 
-
+<!-- TREEVIEW END -->
 
 ## Technologies Used
 
