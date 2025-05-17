@@ -25,7 +25,7 @@ export default function WaitingForSong() {
         </defs>
       </svg>
 
-      <p className="font-500 text-lg">Waiting for next song...</p>
+      <p className="font-500 text-center text-lg">Waiting for next song...</p>
     </div>
   );
 }
