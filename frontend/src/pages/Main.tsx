@@ -179,7 +179,7 @@ export default function Main() {
         )}
 
         {user.isAdmin && currentSongId == "none" && (
-          <div className="flex flex-1 flex-col gap-8 p-12">
+          <div className="flex flex-1 flex-col gap-8 p-4">
             <SearchBox
               placeholder="Search any song..."
               suggestions={songs.map((song) => song.name)}
