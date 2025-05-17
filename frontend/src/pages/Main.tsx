@@ -140,7 +140,7 @@ export default function Main() {
           <>
             {user.isAdmin && (
               <div
-                className="fixed top-32 right-20 h-16 w-16 items-center justify-center rounded-full bg-white"
+                className="fixed top-28 right-8 h-16 w-16 items-center justify-center rounded-full bg-white md:top-32 md:right-20"
                 onClick={() => setCurrentSongId("none")}
               >
                 <svg
