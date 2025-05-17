@@ -50,6 +50,7 @@ npm run dev -- --host
 
 ## Project Structure
 
+```bash
 JaMoveo/
 ├── backend/ # NestJS backend
 │ ├── src/
@@ -89,21 +90,7 @@ JaMoveo/
 ├── architecture.drawio # System architecture diagram
 ├── README.md # Project documentation
 └── .gitignore # Git ignored files
-
-<!-- TREEVIEW START -->
-
-├── example-directory/
-│ ├── build/
-│ ├── scripts/
-│ ├── src/
-│ │ ├── backend/
-│ │ │ └── server/
-│ │ └── frontend/
-│ │ ├── js/
-│ │ └── styles/
-│ └── tests/
-
-<!-- TREEVIEW END -->
+```
 
 ## Technologies Used
 
