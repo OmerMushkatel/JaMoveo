@@ -1,5 +1,3 @@
-# JaMoveo
-
 ![Logo](https://github.com/OmerMushkatel/JaMoveo/blob/main/general/logo.png?raw=true)
 
 ## Description
