@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 
+import type { Song } from "../types/Song";
+
 import Header from "../components/Header";
 
 import SearchBox from "../components/SearchBox";
@@ -12,10 +14,10 @@ import WaitingForSong from "../components/WaitingForSong";
 export default function Main() {
   const user = JSON.parse(localStorage.getItem("user") || "{}");
 
-  const [songs, setSongs] = useState([]);
+  const [songs, setSongs] = useState<Song[]>([]);
+  const [currentSong, setCurrentSong] = useState<Song | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [currentSongId, setCurrentSongId] = useState("none");
-  const [currentSong, setCurrentSong] = useState(null);
   const [autoScroll, setAutoScroll] = useState(false);
 
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -38,7 +40,7 @@ export default function Main() {
     }
   }, [autoScroll]);
 
-  const fetchSongById = async (id) => {
+  const fetchSongById = async (id: string) => {
     if (!id || id === "none") {
       setCurrentSong(null);
       return;

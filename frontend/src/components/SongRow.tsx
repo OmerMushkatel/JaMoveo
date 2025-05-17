@@ -2,7 +2,7 @@ interface SongRowProps {
   id: string;
   name: string;
   singer: string;
-  imageUrl: string;
+  imageUrl?: string;
   onSelect: (id: string) => void;
 }
 

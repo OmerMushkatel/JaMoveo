@@ -17,8 +17,8 @@ export default function Register({ isAdmin }: RegisterProps) {
   const [password, setPassword] = useState("");
 
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-  const [success, setSuccess] = useState(null);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState<string | null>(null);
 
   useEffect(() => {
     if (localStorage.getItem("token") != null) {
@@ -53,12 +53,15 @@ export default function Register({ isAdmin }: RegisterProps) {
         throw new Error(errorData.message || "Registration failed");
       }
 
-      const data = await response.json();
+      await response.json();
 
       setSuccess("Registration successful! You can now log in.");
     } catch (err) {
-      console.error("Registration error:", err);
-      setError(err.message);
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError("An unknown error occurred");
+      }
     } finally {
       setLoading(false);
     }

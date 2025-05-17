@@ -11,7 +11,7 @@ export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (localStorage.getItem("token") != null) {
@@ -49,7 +49,11 @@ export default function Login() {
 
       window.location.href = "/";
     } catch (err) {
-      setError(err.message);
+      if (err instanceof Error) {
+        setError(err.message);
+      } else {
+        setError(String(err));
+      }
     } finally {
       setLoading(false);
     }
