@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  jamoveo-database:
+    container_name: jamoveo-database
+    build:
+      context: ./database
+      dockerfile: Dockerfile.dev
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./database/data:/data/db
+
+  jamoveo-backend:
+    container_name: jamoveo-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - jamoveo-database
