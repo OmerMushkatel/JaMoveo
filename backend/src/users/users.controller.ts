@@ -28,6 +28,6 @@ export class UsersController {
   @UseGuards(JwtAuthGuard)
   @Get('profile')
   getProfile(@Req() req) {
-    return req.user; // user מגיע מ-validate ב-JwtStrategy
+    return req.user;
   }
 }
